@@ -38,14 +38,18 @@ body {
     color: #ECECEC;
 }
 
-.menu_hr {
-    margin-top: 32px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
+.menu_line {
+    width: 1200px;
+    height: 1px;
+    margin-top: 0px;
+    background: rgba(255, 255, 255, 0.10);
+    
+    margin-bottom: 0px;
+    margin-right: 0px;
 
-.menu_hr>hr {
+}
+/*
+.menu_line>hr {
     border: none;
     background: #F5F5F5;
     width: 100%;
@@ -55,7 +59,7 @@ body {
 .header_menu > a{
     text-decoration: none;
 }
-
+*/
 .main_title {
     color: white;
     font-family: Inter;
@@ -98,10 +102,24 @@ a.button {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card_img>img {
+.card_img>a>img {
     border-radius: 20px;
     margin-bottom: 20px;
 }
+
+ .gradient{
+bottom: 0%;
+position: absolute;
+ }
+.gradient>hr {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 285px;
+    height: 72px;
+
+}
+  
 a.button2{
     border: 2px solid #9747FF;
     display: inline-flex;
@@ -119,15 +137,6 @@ a.button2{
     line-height: 20px;
     font-style: normal;
 }
-.footer_info{
-    font-family: Inter;
-    margin-bottom: 40px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    color: var(#ECECEC);
-}
 .footer_adress{
     color: #9747FF;
     margin-bottom: 40px;
@@ -138,4 +147,164 @@ a.button2{
     line-height: normal;
 
 
+}
+.footer_info{
+color:white;
+text-align: right;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.autorization {
+    text-decoration: none;
+    /* margin-left: 850px; */
+    margin-top: 12px;
+    width: 272px;
+    height: 19px;
+    display: flex;
+    gap: 30px;
+}
+
+.autorization a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: initial;
+    text-align: right;
+    line-height: 19.36px;
+    display: flex;
+}
+.autorization_wrap {
+    overflow: hidden;
+    position: fixed;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.autorization_window {
+    margin: auto;
+    /* position: absolute; */
+    /* margin: 50px; */
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #fff;
+    width: 600px;
+    height: 349px;
+    max-width: 100%;
+    overflow: visible;
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    transform: scale(0.9);
+    opacity: 0.3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    /* visibility: hidden; */
+}
+
+#autorization_href {
+    display: none;
+}
+
+#autorization_href:target {
+    display: block;
+    overflow: hidden;
+}
+
+.start_autorization_registration {
+    width: 443px;
+    height: 39px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start_autorization_registration a {
+    text-decoration: none;
+    color: #B9B9B9;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.73px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* .start_registration a {
+    color: #B9B9B9;
+} */
+
+.login_password {
+    display: flex;
+    justify-content: space-between;
+    width: 520px;
+    height: 60px;
+    /* margin-left: 50px;
+    margin-top: 100px; */
+}
+
+.login {
+    /* display: flex; */
+    width: 250px;
+    height: 60px;
+}
+
+.password {
+    /* display: flex; */
+    width: 250px;
+    height: 60px;
+}
+
+.login_password input {
+    width: 225px;
+    height: 60px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.autorization_close {
+    color: #fff;
+    background-color: #9747FF;
+    opacity: 30%;
+    min-width: 520px;
+    height: 60px;
+    top: 399px;
+    left: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    opacity: 0.3px;
+    /* margin-top: 100px;
+    margin-left: 50px; */
+}
+
+.autorization_close:hover {
+    opacity: 100%;
+}
+@media(max-width: 1200px){
+    .container{
+        width: 800px;
+    }
+    .header{
+        width: 600px;
+    }
+    .menu_line{
+        width: 800px;
+    }
 }
